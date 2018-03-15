@@ -23,7 +23,7 @@ sudo sddm-greeter --theme /usr/share/sddm/themes/breeze2/
 
 ### Why
 
-There's not apparently a decent way to change the font in the default login screen theme in Plasma, a part from chaniging fallback fonts or changing globally the system font, hence this fork.
+There's not apparently a decent way to change the font in the default login screen theme in Plasma, a part from changing fallback/system fonts, hence this fork.
 
 
-[1](https://www.reddit.com/r/kde/comments/56l8rn/is_there_any_way_of_changing_the_sddm_default_font/db0wc5i/), [2](https://unix.stackexchange.com/questions/382793/change-the-font-used-in-the-breeze-sddm-theme), [3](https://github.com/sddm/sddm/issues/718), [4](https://github.com/sddm/sddm/issues/718#issuecomment-297484548), [5](https://ubuntuforums.org/showthread.php?t=2275515), 
+[1](https://www.reddit.com/r/kde/comments/56l8rn/is_there_any_way_of_changing_the_sddm_default_font/db0wc5i/), [2](https://unix.stackexchange.com/questions/382793/change-the-font-used-in-the-breeze-sddm-theme), [3](https://github.com/sddm/sddm/issues/718), [4](https://github.com/sddm/sddm/issues/718#issuecomment-297484548), [5](https://ubuntuforums.org/showthread.php?t=2275515)
