@@ -3,7 +3,11 @@
 This is a slightly edited version of the default Breeze SDDM theme shipped with KDE Plasma allowing the font to be customized.
 
 ### Preview
+
+Example using the San Francisco Display font
+
 <img src="preview2.png">
+
 
 ### Install
 
