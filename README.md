@@ -6,7 +6,7 @@ This is a slightly edited version of the default Breeze SDDM theme shipped with 
 
 Example using the San Francisco Display font
 
-<img src="preview2.png">
+<img src="preview.png">
 
 
 ### Install
@@ -18,14 +18,14 @@ sudo mv breeze2-sddm-theme /usr/share/sddm/themes/
 
 Set the new theme in `/etc/sddm.conf` or in KDE Settings > Workspace Theme > Startup and Shutdown > Login Screen.
 
-Change the font in `theme.conf`, editing the `displayFont` value.
+Change the font in `theme.conf.user`, editing the `displayFont` value.
 
 Beware that SDDM is started by root, so you need to have the selected font available/installed by the root X session. SDDM will also use root X session font rendering configuration.
 
 You can preview the login screen with:
 
 ```
-sudo sddm-greeter --theme /usr/share/sddm/themes/breeze2/
+sudo sddm-greeter --theme /usr/share/sddm/themes/breeze2-sddm-theme
 ```
 
 ### Why
