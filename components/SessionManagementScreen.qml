@@ -63,7 +63,6 @@ Item {
 
     default property alias _children: innerLayout.children
 
-
     UserList {
         id: userListView
         visible: showUserList && y > 0
@@ -91,10 +90,7 @@ Item {
             Layout.fillWidth: true
             horizontalAlignment: Text.AlignHCenter
             wrapMode: Text.WordWrap
-            font {
-                italic: true
-                family: config.displayFont
-            }
+            font.italic: true
         }
         ColumnLayout {
             Layout.minimumHeight: implicitHeight

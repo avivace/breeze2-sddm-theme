@@ -8,6 +8,8 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 
 SessionManagementScreen {
 
+    property Item mainPasswordBox: passwordBox
+
     property bool showUsernamePrompt: !showUserList
 
     property string lastUserName
@@ -33,7 +35,7 @@ SessionManagementScreen {
         var password = passwordBox.text
 
         //this is partly because it looks nicer
-        //but more importantly it works round a Qt bug that can trigger if the app is closed with a TextField focussed
+        //but more importantly it works round a Qt bug that can trigger if the app is closed with a TextField focused
         //DAVE REPORT THE FRICKING THING AND PUT A LINK
         loginButton.forceActiveFocus();
         loginRequest(username, password);
@@ -44,12 +46,11 @@ SessionManagementScreen {
         Layout.fillWidth: true
 
         text: lastUserName
-        font {
-            family: config.displayFont
-        }
         visible: showUsernamePrompt
         focus: showUsernamePrompt && !lastUserName //if there's a username prompt it gets focus first, otherwise password does
         placeholderText: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Username")
+
+        onAccepted: passwordBox.forceActiveFocus()
     }
 
     PlasmaComponents.TextField {
@@ -57,9 +58,6 @@ SessionManagementScreen {
         Layout.fillWidth: true
 
         placeholderText: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Password")
-        font {
-            family: config.displayFont
-        }
         focus: !showUsernamePrompt || lastUserName
         echoMode: TextInput.Password
         revealPasswordButtonShown: true
@@ -96,9 +94,6 @@ SessionManagementScreen {
         Layout.fillWidth: true
 
         text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Login")
-        font {
-            family: config.displayFont
-        }
         onClicked: startLogin();
     }
 

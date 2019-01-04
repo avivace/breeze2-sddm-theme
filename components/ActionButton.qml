@@ -59,10 +59,7 @@ Item {
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignTop
         wrapMode: Text.WordWrap
-        font {
-            family: config.displayFont
-            underline: root.activeFocus
-        }
+        font.underline: root.activeFocus
     }
 
     MouseArea {

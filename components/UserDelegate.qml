@@ -18,7 +18,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-import QtQuick 2.4
+import QtQuick 2.8
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
@@ -48,6 +48,7 @@ Item {
 
     Item {
         id: imageSource
+        anchors.horizontalCenter: parent.horizontalCenter
         width: faceSize
         height: faceSize
 
@@ -81,7 +82,8 @@ Item {
 
         property var source: ShaderEffectSource {
             sourceItem: imageSource
-            hideSource: true
+            // software rendering is just a fallback so we can accept not having a rounded avatar here
+            hideSource: wrapper.GraphicsInfo.api !== GraphicsInfo.Software
             live: false
         }
 
@@ -142,10 +144,7 @@ Item {
         elide: Text.ElideRight
         horizontalAlignment: Text.AlignHCenter
         //make an indication that this has active focus, this only happens when reached with keyboard navigation
-        font {
-            underline: wrapper.activeFocus
-            family: config.displayFont
-        }
+        font.underline: wrapper.activeFocus
     }
 
     MouseArea {
