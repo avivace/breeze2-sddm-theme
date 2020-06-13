@@ -34,3 +34,14 @@ There's not apparently a decent way to change the font in the default login scre
 
 
 [1](https://www.reddit.com/r/kde/comments/56l8rn/is_there_any_way_of_changing_the_sddm_default_font/db0wc5i/), [2](https://unix.stackexchange.com/questions/382793/change-the-font-used-in-the-breeze-sddm-theme), [3](https://github.com/sddm/sddm/issues/718), [4](https://github.com/sddm/sddm/issues/718#issuecomment-297484548), [5](https://ubuntuforums.org/showthread.php?t=2275515)
+
+
+### DPI Scaling / HiDPI
+
+If you're here to make the SDDM look decent with higher DPI settings, you may want to edit `/usr/share/sddm/scripts/Xsetup` and add the line ([Source](https://www.reddit.com/r/kde/comments/30fvir/how_to_set_dpi_in_sddm/)):
+
+```
+xrandr --dpi <desired dpi, for instance 192>
+```
+
+Or check the DPI sections of the [SDDM page](https://wiki.archlinux.org/index.php/SDDM#DPI_settings) on the ArchWiki.
